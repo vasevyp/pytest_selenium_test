@@ -38,5 +38,5 @@ def test_choice_goods():
 
     print('Test Success!!')
 
-    # time.sleep(20)
-    # driver.quit()
+    time.sleep(10)
+    driver.quit()

@@ -14,13 +14,17 @@ class MyGoods(Base):
     # Goodss Locators
     catalog = '//*[@id="header_wrap"]/div[3]/div/nav/ul/li[2]/a'
     first_word = '//*[@id="all_page"]/div/div[2]/div/div/h1'
-    baking_mixes = '//*[@id="all_page"]/div/div[2]/div/div/div/div/ul/li[2]/div/a/span'
+
+    baking_mixes_list = '//*[@id="all_page"]/div/div[2]/div/div/div/div/ul/li[2]/div/a/span'
     baking_mixes_product = '//*[@id="ajax_content_catalog"]/div[2]/div[1]/div/div[5]/a/span'
-    droggy = '//*[@id="all_page"]/div/div[2]/div/div/div/div/ul/li[3]/div/a/span'
+
+    droggy_list = '//*[@id="all_page"]/div/div[2]/div/div/div/div/ul/li[3]/div/a/span'
     droggy_product = '//*[@id="ajax_content_catalog"]/div[2]/div[1]/div/div[5]/a/span'
-    flour = '//*[@id="all_page"]/div/div[2]/div/div/div/div/ul/li[1]/div/a/span'
+
+    flour_list = '//*[@id="all_page"]/div/div[2]/div/div/div/div/ul/li[1]/div/a/span'
     # Мука амарантовая "Масляный Король"  300г
     flour_product = '//*[@id="ajax_content_catalog"]/div[2]/div[1]/div/div[5]/a/span'
+
     addto_cart = '//button[@id="add_to_cart"]'
 
     # Getters
@@ -35,15 +39,15 @@ class MyGoods(Base):
 
     def get_flour_list(self):
         return WebDriverWait(self.driver, 60).until(
-            EC.element_to_be_clickable((By.XPATH, self.flour)))
+            EC.element_to_be_clickable((By.XPATH, self.flour_list)))
 
     def get_baking_mixes_list(self):
         return WebDriverWait(self.driver, 60).until(
-            EC.element_to_be_clickable((By.XPATH, self.baking_mixes)))
+            EC.element_to_be_clickable((By.XPATH, self.baking_mixes_list)))
 
     def get_droggy_list(self):
         return WebDriverWait(self.driver, 60).until(
-            EC.element_to_be_clickable((By.XPATH, self.droggy)))
+            EC.element_to_be_clickable((By.XPATH, self.droggy_list)))
 
     def get_flour_product(self):
         return WebDriverWait(self.driver, 60).until(

@@ -1,7 +1,6 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException
 from base.base_class import Base
 import time
 
@@ -14,9 +13,10 @@ class MyCompleat(Base):
     # Finish Locators
 
     account = '//*[@id="header_wrap"]/div[1]/div/div[2]/ul/li[5]/a/span'
+
     cart = '//*[@id="header_wrap"]/div[3]/div/nav/ul/li[6]/div/div/a'
     clear_cart = '//*[@id="checkout_left"]/div/a/span'
-    a = '//*[@id="header_wrap"]/div[2]/div/a'
+
     exit_account = '//*[@id="header_wrap"]/div[1]/div/div[2]/ul/li[6]/a/span'
     thanks_word = '//*[@id="all_page"]/div/div[2]/div/div/div/div'
 
@@ -33,10 +33,6 @@ class MyCompleat(Base):
     def get_clear_cart(self):
         return WebDriverWait(self.driver, 30).until(
             EC.element_to_be_clickable((By.XPATH, self.clear_cart)))
-
-    def get_a(self):
-        return WebDriverWait(self.driver, 30).until(
-            EC.element_to_be_clickable((By.XPATH, self.a)))
 
     def get_exit(self):
         return WebDriverWait(self.driver, 100).until(
@@ -60,10 +56,6 @@ class MyCompleat(Base):
         self.get_clear_cart().click()
         print('Click clear Cart')
 
-    def click_a(self):
-        self.get_a().click()
-        print('Click clear')
-
     def click_exit(self):
         self.get_exit().click()
         print('Click Exit Account')
@@ -71,10 +63,8 @@ class MyCompleat(Base):
      # Methods
 
     def select_compleat(self):
-
         self.click_account()
         self.click_cart()
-        # time.sleep(1)
         self.click_clear_cart()
         time.sleep(1)
         # Прокручиваем страницу вверх на 500 пикселей
@@ -82,7 +72,4 @@ class MyCompleat(Base):
         self.click_exit()
         self.assert_word(self.get_thanks_word(),
                          'Спасибо, что посетили наш магазин!')
-        # try:
-        # ....
-        # except TimeoutException as e:
-        #     print('click_exite  - Not done!!!\n', e)
+        self.assert_url('https://doma-hleb.ru/logoff.php?logout=1')

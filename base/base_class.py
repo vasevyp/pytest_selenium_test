@@ -29,6 +29,8 @@ class Base():
         assert get_url == result
         print('URL value - OK!')
 
+    '''Method create page screenshot '''
+
     def do_screenshot(self):
         now_time = datetime.datetime.now().strftime("%y-%m-%d_%H:%M:%S")
         name_screenshot = str(self.get_current_url()) + str(now_time) + '.png'

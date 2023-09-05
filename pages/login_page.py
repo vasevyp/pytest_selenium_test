@@ -17,8 +17,10 @@ class MyLogin(Base):
     # Auth Locators
 
     authorization = '//*[@id="header_wrap"]/div[1]/div/div[2]/ul/li[5]/a/span'
+
     my_login = '//input[@id="login_email"]'
     my_password = '//input[@id="login_pass"]'
+
     commit_button = '//button[@id="btn_login"]'
 
     # Getters
@@ -72,11 +74,10 @@ class MyLogin(Base):
         self.driver.get(self.url)
         self.driver.maximize_window()
         self.get_current_url()
-
+        # методы авторизации, вход в личный кабинет
         self.click_mylogin()
         self.input_login(self.login_test)
         self.input_password(self.password_test)
         self.click_commit()
         self.get_current_url()
-        # self.click_x_button()
         time.sleep(2)

@@ -14,10 +14,10 @@ class MyOrder(Base):
     comment_text = 'Я выполняю тестовое задание по тестированию бизнес пути покупки товаров на этом сайте.'
 
     # Order Locators
-
-    order = '//*[@id="checkout_right"]/div/button'
+    # Почта России, радио кнопка
     post = '//*[@id="shipping_options"]/div[3]/label'
     comment = '//textarea[@id="comments"]'
+    order = '//*[@id="checkout_right"]/div/button'
 
     # Getters
 

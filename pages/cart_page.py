@@ -1,9 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException
 from base.base_class import Base
-import time
 
 
 class MyCart(Base):
@@ -44,7 +42,6 @@ class MyCart(Base):
      # Methods
 
     def select_cart(self):
-
         self.click_cart()
         self.assert_word(self.get_cart_word(), 'В корзине 3 товара')
         self.do_screenshot()
