@@ -127,6 +127,8 @@ Click Exit Account
 
 Value word "Спасибо, что посетили наш магазин!"- OK!
 
+URL value - OK!
+
 Test Success!!
 
 PASSED
