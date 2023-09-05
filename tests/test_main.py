@@ -25,7 +25,9 @@ def test_choice_goods():
     auth.my_authorization()
 
     goods = MyGoods(driver)
-    goods.select_goods()
+    goods.select_goods_1()
+    goods.select_goods_2()
+    goods.select_goods_3()
 
     cart = MyCart(driver)
     cart.select_cart()

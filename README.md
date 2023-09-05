@@ -57,7 +57,7 @@
 
 ## 3. Результат тестирования
 
-_tests/test_main.py::test_choice_goods Start AutoTest_
+tests/test_main.py::test_choice_goods Start AutoTest
 
 Current_url: https://doma-hleb.ru/
 

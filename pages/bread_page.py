@@ -1,7 +1,6 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException
 from base.base_class import Base
 import time
 
@@ -101,7 +100,7 @@ class MyGoods(Base):
 
      # Methods
 
-    def select_goods(self):
+    def select_goods_1(self):
         self.click_catalog()
         self.get_current_url()
         self.assert_word(self.get_first_word(), 'Каталог товаров')
@@ -109,14 +108,17 @@ class MyGoods(Base):
         self.click_baking_mixes_product()
         self.click_addto_cart()
         time.sleep(3)
+
+    def select_goods_2(self):
         self.click_catalog()
         self.click_droggy_list()
         self.click_droggy_product()
         self.click_addto_cart()
         time.sleep(3)
+
+    def select_goods_3(self):
         self.click_catalog()
         self.click_flour_list()
-        time.sleep(3)
         self.click_flour_product()
         self.click_addto_cart()
         time.sleep(3)
