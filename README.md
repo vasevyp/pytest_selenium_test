@@ -58,39 +58,75 @@
 ## 3. Результат тестирования
 
 _tests/test_main.py::test_choice_goods Start AutoTest_
+
 Current_url: https://doma-hleb.ru/
+
 Click Open click_Authorization
+
 Input Login
+
 Input Password
+
 Click Commit Button
+
 Current_url: https://doma-hleb.ru/
+
 Click Open Catalog
+
 Current_url: https://doma-hleb.ru/catalog
+
 Value word "Каталог товаров"- OK!
+
 Click Open baking_mixes list
+
 Click Baking mixes product
+
 Click Button add to cart
+
 Click Open Catalog
+
 Click Open droggy list
+
 Click Droggy product
+
 Click Button add to cart
+
 Click Open Catalog
+
 Click Open flour list
+
 Click Flour_product
+
 Click Button add to cart
+
 Click Cart
+
 Value word "В корзине 3 товара"- OK!
+
 Current_url: https://doma-hleb.ru/shopping_cart.php
+
 Screenshot OK!
+
 Click Checkout Cart
+
 Click PochtaRossii radio button
+
 Input Comment
+
 Click Order
+
 Current_url: https://doma-hleb.ru/sc_checkout_confirmation.php
+
 Click Account
+
 Click Cart
+
 Click clear Cart
+
 Click Exit Account
+
 Value word "Спасибо, что посетили наш магазин!"- OK!
+
 Test Success!!
+
 PASSED
