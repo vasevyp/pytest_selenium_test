@@ -10,10 +10,6 @@ class MyLogin(Base):
     login_test = 'vasevyp@yandex.ru'
     password_test = 'mytestshop'
 
-    def __init__(self, driver):
-        super().__init__(driver)
-        self.driver = driver
-
     # Auth Locators
 
     authorization = '//*[@id="header_wrap"]/div[1]/div/div[2]/ul/li[5]/a/span'

@@ -5,10 +5,6 @@ from base.base_class import Base
 
 
 class MyCart(Base):
-    def __init__(self, driver):
-        super().__init__(driver)
-        self.driver = driver
-
     # Cart Locators
 
     cart = '//*[@id="header_wrap"]/div[3]/div/nav/ul/li[6]/div/div/a'

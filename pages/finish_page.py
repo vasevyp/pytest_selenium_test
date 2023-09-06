@@ -6,9 +6,6 @@ import time
 
 
 class MyCompleat(Base):
-    def __init__(self, driver):
-        super().__init__(driver)
-        self.driver = driver
 
     # Finish Locators
 

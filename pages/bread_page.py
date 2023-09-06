@@ -6,9 +6,6 @@ import time
 
 
 class MyGoods(Base):
-    def __init__(self, driver):
-        super().__init__(driver)
-        self.driver = driver
 
     # Goodss Locators
     catalog = '//*[@id="header_wrap"]/div[3]/div/nav/ul/li[2]/a'

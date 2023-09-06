@@ -7,10 +7,6 @@ import time
 
 
 class MyOrder(Base):
-    def __init__(self, driver):
-        super().__init__(driver)
-        self.driver = driver
-
     comment_text = 'Я выполняю тестовое задание по тестированию бизнес пути покупки товаров на этом сайте.'
 
     # Order Locators
